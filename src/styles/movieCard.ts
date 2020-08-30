@@ -11,6 +11,7 @@ const movieCard: IMovieCard = {
     minHeight: '200px',
     backgroundColor: 'secondary',
     display: 'flex',
+    flexDirection: ['column', 'row', 'row'],
     alignItems: 'center',
     padding: '20px',
     margin: '40px 0',
