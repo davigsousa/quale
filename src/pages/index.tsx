@@ -41,6 +41,7 @@ export default function Home() {
 
       <Box sx={style.twoColumn}>
         <Box sx={style.genreBox}>
+          <Box sx={style.genreBoxTitle}>Selecione uma categoria</Box>
           {genres.map((item) => (
             <Button
               onClick={() => handleGenre(item.name)}

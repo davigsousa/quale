@@ -5,6 +5,7 @@ interface IStyles {
   title: SxStyleProp;
   twoColumn: SxStyleProp;
   genreBox: SxStyleProp;
+  genreBoxTitle: SxStyleProp;
   genre: SxStyleProp;
   lupe: SxStyleProp;
 }
@@ -30,13 +31,23 @@ const styles: IStyles = {
     margin: '40px 0',
     backgroundColor: 'secondary',
     borderRadius: '40px',
-    flexDirection: ['column-reverse', 'column-reverse', 'row'],
+    flexDirection: ['column-reverse', 'row', 'row'],
   },
   genreBox: {
     width: ['100%', '60%'],
     height: '100%',
     display: 'flex',
+    justifyContent: ['center', 'start', 'start'],
     flexWrap: 'wrap',
+  },
+  genreBoxTitle: {
+    fontFamily: 'heading',
+    fontWeight: 'bold',
+    textAlign: ['center', 'start', 'start'],
+    fontSize: [4, 4, 5],
+    width: '100%',
+    marginBottom: '5px',
+    color: '#dcdcdc',
   },
   genre: {
     backgroundColor: '#dcdcdc',
@@ -55,7 +66,7 @@ const styles: IStyles = {
     },
   },
   lupe: {
-    width: ['200px', '270px'],
+    width: ['200px', '200px', '270px'],
   },
 };
 
