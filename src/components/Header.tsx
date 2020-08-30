@@ -9,7 +9,7 @@ import header from '../styles/header';
 function Header() {
   return (
     <Box sx={header.container}>
-      <Button>
+      <Button focusable>
         {(props) => (
           <Link sx={header.button} {...props} to="/">
             <img src={brand} alt="Qualé?" sx={header.image} />
