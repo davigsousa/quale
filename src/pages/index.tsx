@@ -31,11 +31,13 @@ export default function Home() {
 
     if (genre.name) disclosure.toggle();
     setGenre(newGenre);
+    setMovies([]);
 
     const response = await api.get(
-      `/discover/movie?page=1&with_genres=${genre.id}&${keyString}`
+      `/discover/movie?page=1&with_genres=${newGenre.id}&${keyString}`
     );
 
+    console.log('res', response.data.results);
     setMovies(response.data.results);
   };
 
@@ -65,7 +67,7 @@ export default function Home() {
       <DisclosureContent {...disclosure}>
         <h1 sx={style.genreTitle}>{genre.name}</h1>
         {movies.map((item) => (
-          <MovieCard movie={item} />
+          <MovieCard key={item.id} movie={item} />
         ))}
       </DisclosureContent>
     </PageTemplate>
