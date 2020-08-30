@@ -1,5 +1,10 @@
-import React from "react"
+import React from 'react';
+import PageTemplate from '../templates/Page';
 
 export default function Home() {
-  return <div>Hello world!</div>
+  return (
+    <PageTemplate>
+      <div>Hello world!</div>
+    </PageTemplate>
+  );
 }
