@@ -12,7 +12,7 @@ function Header() {
       <Button focusable>
         {(props) => (
           <Link sx={header.button} {...props} to="/">
-            <img src={brand} alt="Qualé?" sx={header.image} />
+            <img id="menu" src={brand} alt="Qualé?" sx={header.image} />
           </Link>
         )}
       </Button>

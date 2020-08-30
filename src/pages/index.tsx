@@ -49,9 +49,7 @@ export default function Home() {
 
       <Box sx={style.twoColumn}>
         <Box sx={style.genreBox}>
-          <Box sx={style.genreBoxTitle} id="menu">
-            Selecione uma categoria
-          </Box>
+          <Box sx={style.genreBoxTitle}>Selecione uma categoria</Box>
           {genres.map((item) => (
             <AnchorLink to="#categoria" key={item.id}>
               <Button
