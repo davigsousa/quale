@@ -1,9 +1,9 @@
 export default {
   colors: {
     text: '#fff',
-    background: '#041627',
-    primary: '#3ab6c9',
-    secondary: '#0a3156',
+    background: '#072038',
+    primary: '#063562',
+    secondary: '#07243f',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
   fontWeights: {

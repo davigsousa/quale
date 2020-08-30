@@ -29,7 +29,7 @@ const styles: IStyles = {
     justifyContent: 'center',
     padding: '40px 10px',
     margin: '40px 0',
-    backgroundColor: 'secondary',
+    backgroundColor: 'primary',
     borderRadius: '40px',
     flexDirection: ['column-reverse', 'row', 'row'],
   },

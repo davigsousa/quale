@@ -16,7 +16,7 @@ const header: IHeader = {
     padding: '40px',
     marginBottom: '40px',
     borderBottomStyle: 'solid',
-    borderBottomColor: '#030f1c',
+    borderBottomColor: '#041627',
     borderBottomWidth: '2px',
   },
   image: {
