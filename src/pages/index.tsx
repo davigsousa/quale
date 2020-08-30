@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui';
 import { useEffect, useState } from 'react';
 import { Box, Button } from 'reakit';
 import { useDisclosureState, DisclosureContent } from 'reakit/Disclosure';
-import { navigate } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 import PageTemplate from '../templates/Page';
 import style from '../styles';
@@ -32,14 +32,12 @@ export default function Home() {
 
     if (genre.name) disclosure.toggle();
     setGenre(newGenre);
-    setMovies([]);
 
     const response = await api.get(
       `/discover/movie?page=1&with_genres=${newGenre.id}&${keyString}`
     );
 
     setMovies(response.data.results);
-    navigate('/#categoria');
   };
 
   return (
@@ -55,13 +53,15 @@ export default function Home() {
             Selecione uma categoria
           </Box>
           {genres.map((item) => (
-            <Button
-              onClick={() => handleGenre(item)}
-              focusable
-              sx={style.genre}
-            >
-              {item.name}
-            </Button>
+            <AnchorLink to="#categoria" key={item.id}>
+              <Button
+                onClick={() => handleGenre(item)}
+                focusable
+                sx={style.genre}
+              >
+                {item.name}
+              </Button>
+            </AnchorLink>
           ))}
         </Box>
         <img sx={style.lupe} src={lupe} alt="Lupa" />
