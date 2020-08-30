@@ -23,7 +23,8 @@ const header: IHeader = {
   },
   title: {
     fontFamily: 'heading',
-    fontSize: [5, 6, 7],
+    color: 'primary',
+    fontSize: [4, 5, 6],
     fontWeight: 'heading',
     marginRight: ['5%', '10%', '15%'],
   },
