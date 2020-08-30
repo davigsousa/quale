@@ -4,6 +4,7 @@ export interface Genre {
 }
 
 export interface Movie {
+  id: number;
   overview: string;
   popularity: number;
   poster_path: string;
