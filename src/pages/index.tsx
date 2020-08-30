@@ -1,7 +1,13 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { Box, Button } from 'reakit';
 import { useEffect, useState } from 'react';
+import { Box, Button } from 'reakit';
+import {
+  useDisclosureState,
+  Disclosure,
+  DisclosureContent,
+} from 'reakit/Disclosure';
+
 import PageTemplate from '../templates/Page';
 import style from '../styles';
 import api, { keyString } from '../services/api';
@@ -9,6 +15,8 @@ const lupe = require('../../static/lupe.png');
 
 export default function Home() {
   const [genres, setGenres] = useState([]);
+  const [genre, setGenre] = useState('');
+  const disclosure = useDisclosureState({ visible: false });
 
   useEffect(() => {
     (async () => {
@@ -16,6 +24,13 @@ export default function Home() {
       setGenres(response.data.genres);
     })();
   }, []);
+
+  const handleGenre = (name: string) => {
+    disclosure.toggle();
+
+    if (genre) disclosure.toggle();
+    setGenre(name);
+  };
 
   return (
     <PageTemplate>
@@ -27,13 +42,19 @@ export default function Home() {
       <Box sx={style.twoColumn}>
         <Box sx={style.genreBox}>
           {genres.map((item) => (
-            <Button key={Math.random()} focusable sx={style.genre}>
+            <Button
+              onClick={() => handleGenre(item.name)}
+              focusable
+              sx={style.genre}
+            >
               {item.name}
             </Button>
           ))}
         </Box>
         <img sx={style.lupe} src={lupe} alt="Lupa" />
       </Box>
+
+      <DisclosureContent {...disclosure}>{genre}</DisclosureContent>
     </PageTemplate>
   );
 }
