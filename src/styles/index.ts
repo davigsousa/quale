@@ -3,6 +3,7 @@ import { SxStyleProp, Flex } from 'theme-ui';
 interface IStyles {
   content: SxStyleProp;
   title: SxStyleProp;
+  genreTitle: SxStyleProp;
   twoColumn: SxStyleProp;
   genreBox: SxStyleProp;
   genreBoxTitle: SxStyleProp;
@@ -19,6 +20,12 @@ const styles: IStyles = {
   },
   title: {
     fontSize: [4, 4, 5],
+    fontFamily: 'heading',
+    textAlign: ['center', 'start', 'start'],
+  },
+  genreTitle: {
+    marginTop: '60px',
+    fontSize: [5, 5, 6],
     fontFamily: 'heading',
     textAlign: ['center', 'start', 'start'],
   },

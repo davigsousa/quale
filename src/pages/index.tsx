@@ -9,23 +9,29 @@ import style from '../styles';
 import api, { keyString } from '../services/api';
 const lupe = require('../../static/lupe.png');
 
+interface Genre {
+  id: number;
+  name: string;
+}
+
 export default function Home() {
-  const [genres, setGenres] = useState([]);
-  const [genre, setGenre] = useState('');
+  const [genres, setGenres] = useState<Genre[]>([]);
+  const [genre, setGenre] = useState<Genre>({ id: 0, name: '' });
   const disclosure = useDisclosureState({ visible: false });
 
   useEffect(() => {
     (async () => {
       const response = await api.get(`/genre/movie/list?${keyString}`);
+      console.log(response.data);
       setGenres(response.data.genres);
     })();
   }, []);
 
-  const handleGenre = (name: string) => {
+  const handleGenre = (newGenre: Genre) => {
     disclosure.toggle();
 
-    if (genre) disclosure.toggle();
-    setGenre(name);
+    if (genre.name) disclosure.toggle();
+    setGenre(newGenre);
   };
 
   return (
@@ -40,7 +46,7 @@ export default function Home() {
           <Box sx={style.genreBoxTitle}>Selecione uma categoria</Box>
           {genres.map((item) => (
             <Button
-              onClick={() => handleGenre(item.name)}
+              onClick={() => handleGenre(item)}
               focusable
               sx={style.genre}
             >
@@ -51,7 +57,9 @@ export default function Home() {
         <img sx={style.lupe} src={lupe} alt="Lupa" />
       </Box>
 
-      <DisclosureContent {...disclosure}>{genre}</DisclosureContent>
+      <DisclosureContent {...disclosure}>
+        <h1 sx={style.genreTitle}>{genre.name}</h1>
+      </DisclosureContent>
     </PageTemplate>
   );
 }
