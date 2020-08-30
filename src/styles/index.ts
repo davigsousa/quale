@@ -46,7 +46,6 @@ const styles: IStyles = {
     fontSize: 2,
     border: 'none',
     cursor: 'pointer',
-    outline: 'none',
     transition: '0.3s',
     ':hover': {
       transform: 'scale(1.1)',
