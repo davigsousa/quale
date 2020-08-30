@@ -12,16 +12,20 @@ const header: IHeader = {
     height: '200px',
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'space-between',
+    flexDirection: ['column', 'row', 'row'],
     padding: '40px',
+    marginBottom: '40px',
   },
   image: {
     height: '100%',
-    marginX: '100px',
+    marginLeft: ['5%', '10%', '15%'],
   },
   title: {
     fontFamily: 'heading',
-    fontSize: 7,
+    fontSize: [5, 6, 7],
     fontWeight: 'heading',
+    marginRight: ['5%', '10%', '15%'],
   },
 };
 

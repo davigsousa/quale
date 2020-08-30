@@ -5,14 +5,15 @@ import Header from '../components/Header';
 
 interface TemplatePageProps {
   children: ReactNode;
+  title: string;
 }
 
 function TemplatePage(props: TemplatePageProps) {
-  const { children } = props;
+  const { children, title } = props;
 
   return (
     <Provider>
-      <Header />
+      <Header title={title} />
       {children}
     </Provider>
   );
