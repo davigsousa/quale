@@ -33,7 +33,7 @@ function SEO({ description, lang = 'pt-BR', meta = [], title }) {
         },
         {
           property: `og:title`,
-          content: `${title} | ${site.siteMetadata.title}`,
+          content: `${title}`,
         },
         {
           property: `og:description`,
@@ -53,7 +53,7 @@ function SEO({ description, lang = 'pt-BR', meta = [], title }) {
         },
         {
           name: `twitter:title`,
-          content: `${title} | ${site.siteMetadata.title}`,
+          content: `${title}`,
         },
         {
           name: `twitter:description`,
