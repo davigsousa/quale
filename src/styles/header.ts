@@ -3,7 +3,6 @@ import { SxStyleProp } from 'theme-ui';
 interface IHeader {
   container: SxStyleProp;
   image: SxStyleProp;
-  title: SxStyleProp;
 }
 
 const header: IHeader = {
@@ -12,21 +11,15 @@ const header: IHeader = {
     height: '200px',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    flexDirection: ['column', 'row', 'row'],
+    justifyContent: 'center',
     padding: '40px',
     marginBottom: '40px',
+    borderBottomStyle: 'solid',
+    borderBottomColor: '#030f1c',
+    borderBottomWidth: '2px',
   },
   image: {
     height: '100%',
-    marginLeft: ['5%', '10%', '15%'],
-  },
-  title: {
-    fontFamily: 'heading',
-    color: 'primary',
-    fontSize: [4, 5, 6],
-    fontWeight: 'heading',
-    marginRight: ['5%', '10%', '15%'],
   },
 };
 

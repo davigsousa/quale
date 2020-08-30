@@ -6,13 +6,12 @@ import Header from '../components/Header';
 
 interface TemplatePageProps {
   children: ReactNode;
-  title: string;
 }
 
 function TemplatePage(props: TemplatePageProps) {
   return (
     <Provider>
-      <Header title={props.title} />
+      <Header />
       {props.children}
     </Provider>
   );
