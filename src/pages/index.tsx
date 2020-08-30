@@ -2,11 +2,7 @@
 import { jsx } from 'theme-ui';
 import { useEffect, useState } from 'react';
 import { Box, Button } from 'reakit';
-import {
-  useDisclosureState,
-  Disclosure,
-  DisclosureContent,
-} from 'reakit/Disclosure';
+import { useDisclosureState, DisclosureContent } from 'reakit/Disclosure';
 
 import PageTemplate from '../templates/Page';
 import style from '../styles';
