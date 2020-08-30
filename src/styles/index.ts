@@ -27,9 +27,10 @@ const styles: IStyles = {
     alignItems: 'center',
     justifyContent: 'center',
     padding: '10px',
+    flexDirection: ['column-reverse', 'column-reverse', 'row'],
   },
   genreBox: {
-    width: '60%',
+    width: ['100%', '60%'],
     height: '100%',
     display: 'flex',
     flexWrap: 'wrap',
