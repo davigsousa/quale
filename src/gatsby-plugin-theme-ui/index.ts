@@ -12,8 +12,8 @@ export default {
     bold: 700,
   },
   fonts: {
-    body: 'Roboto, "Helvetica Neue", sans-serif',
-    heading: 'Raleway, sans-serif',
+    body: 'Raleway, Roboto, "Helvetica Neue", sans-serif',
+    heading: 'Raleway, Roboto, "Helvetica Neue", sans-serif',
     monospace: 'Menlo, monospace',
   },
 };

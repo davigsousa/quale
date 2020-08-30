@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'ttps://api.themoviedb.org/3/',
+  baseURL: 'https://api.themoviedb.org/3/',
 });
 
 api.interceptors.request.use(async (config) => {
@@ -14,4 +14,7 @@ api.interceptors.request.use(async (config) => {
   return config;
 });
 
+const apiKey = process.env.GATSBY_API_KEY;
+
+export const keyString = `api_key=${apiKey}&language=pt-BR`;
 export default api;
