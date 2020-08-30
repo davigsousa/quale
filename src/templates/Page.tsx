@@ -11,8 +11,6 @@ interface TemplatePageProps {
   children: ReactNode;
 }
 
-console.log(style);
-
 function TemplatePage(props: TemplatePageProps) {
   return (
     <Provider>
