@@ -23,10 +23,13 @@ export default function Home() {
         Quer saber <i>qualé</i> ou quais são os filmes mais populares de uma
         categoria?
       </h1>
+
       <Box sx={style.twoColumn}>
         <Box sx={style.genreBox}>
           {genres.map((item) => (
-            <Button sx={style.genre}>{item.name}</Button>
+            <Button key={Math.random()} focusable sx={style.genre}>
+              {item.name}
+            </Button>
           ))}
         </Box>
         <img sx={style.lupe} src={lupe} alt="Lupa" />
