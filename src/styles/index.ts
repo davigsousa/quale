@@ -15,6 +15,7 @@ const styles: IStyles = {
   content: {
     width: '100%',
     maxWidth: '900px',
+    minHeight: '100vh',
     margin: 'auto',
     padding: ['5%', '3%', '0'],
   },
