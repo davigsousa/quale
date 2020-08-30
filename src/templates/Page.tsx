@@ -5,6 +5,7 @@ import { Provider, Box } from 'reakit';
 import 'typeface-raleway';
 
 import Header from '../components/Header';
+import BackToTop from '../components/BackToTop';
 import style from '../styles';
 
 interface TemplatePageProps {
@@ -16,6 +17,7 @@ function TemplatePage(props: TemplatePageProps) {
     <Provider>
       <Header />
       <Box sx={style.content}>{props.children}</Box>
+      <BackToTop />
     </Provider>
   );
 }

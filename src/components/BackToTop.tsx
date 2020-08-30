@@ -2,11 +2,18 @@
 import { jsx } from 'theme-ui';
 import { Box, Button } from 'reakit';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import style from '../styles/backToTop';
 
 function BackToTop() {
   return (
-    <Box>
-      <Button>{(props) => <AnchorLink {...props} to="/#menu" />}</Button>
+    <Box sx={style.container}>
+      <Button>
+        {(props) => (
+          <AnchorLink {...props} sx={style.button} to="/#menu">
+            Voltar ao topo
+          </AnchorLink>
+        )}
+      </Button>
     </Box>
   );
 }
