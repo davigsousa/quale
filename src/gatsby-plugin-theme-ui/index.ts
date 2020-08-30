@@ -3,7 +3,7 @@ export default {
     text: '#fff',
     background: '#072038',
     primary: '#063562',
-    secondary: '#07243f',
+    secondary: '#093256',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
   fontWeights: {
@@ -15,5 +15,11 @@ export default {
     body: 'Raleway, Roboto, "Helvetica Neue", sans-serif',
     heading: 'Raleway, Roboto, "Helvetica Neue", sans-serif',
     monospace: 'Menlo, monospace',
+  },
+  styles: {
+    root: {
+      fontFamily: 'body',
+      fontWeight: 'body',
+    },
   },
 };
