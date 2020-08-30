@@ -24,7 +24,7 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#093256',
         display: 'minimal-ui',
-        icon: '/static/logo.png',
+        icon: './static/logo.png',
       },
     },
   ],
