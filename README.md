@@ -20,9 +20,9 @@ O intuito é trabalhar com a API de Filmes disponibilizada pelo [TheMovieDB](htt
 ---
 
 <img 
-  src="https://user-images.githubusercontent.com/40612788/91667395-c9f0e800-eada-11ea-95fc-80cb3605ca8e.png"
+  src="https://user-images.githubusercontent.com/40612788/91668045-919fd880-eadf-11ea-893c-a985a30705d1.png"
   alt="Screenshot inicial do Website"
-  width="500px"
+  width="600px"
 />
 
 ---
@@ -30,5 +30,5 @@ O intuito é trabalhar com a API de Filmes disponibilizada pelo [TheMovieDB](htt
 <img 
   src="https://user-images.githubusercontent.com/40612788/91667418-f3aa0f00-eada-11ea-9286-4cdd0722055b.png"
   alt="Screenshot do Website"
-  width="500px"
+  width="600px"
 />
