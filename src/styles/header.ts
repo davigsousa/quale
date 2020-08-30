@@ -1,10 +1,18 @@
 import { SxStyleProp } from 'theme-ui';
 
-const header: SxStyleProp = {
+interface IHeader {
+  container: SxStyleProp;
+  image: SxStyleProp;
+}
+
+const header: IHeader = {
   container: {
     width: '100%',
-    height: '200px',
+    height: '150px',
     display: 'flex',
+  },
+  image: {
+    height: '100%',
   },
 };
 

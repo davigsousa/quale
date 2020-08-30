@@ -1,5 +1,7 @@
 import { SxStyleProp } from 'theme-ui';
 
-const styles: SxStyleProp = {};
+interface IStyles {}
+
+const styles: IStyles = {};
 
 export default styles;
