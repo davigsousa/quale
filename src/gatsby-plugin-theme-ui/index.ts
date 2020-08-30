@@ -1,5 +1,3 @@
-import styles from './defaultStyles';
-
 export default {
   colors: {
     text: '#fff',
@@ -18,5 +16,4 @@ export default {
     heading: '"Helvetica Neue", sans-serif',
     monospace: 'Menlo, monospace',
   },
-  styles,
 };

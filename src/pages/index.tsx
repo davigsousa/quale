@@ -1,10 +1,11 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import PageTemplate from '../templates/Page';
 
 export default function Home() {
   return (
     <PageTemplate>
-      <h1>Qualé?</h1>
+      <h1 sx={{ fontSize: 5, fontFamily: 'heading' }}>Qualé?</h1>
     </PageTemplate>
   );
 }
