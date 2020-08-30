@@ -10,6 +10,7 @@ import api, { keyString } from '../services/api';
 const lupe = require('../../static/lupe.png');
 
 import { Genre, Movie } from '../interfaces';
+import MovieCard from '../components/MovieCard';
 
 export default function Home() {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -63,6 +64,9 @@ export default function Home() {
 
       <DisclosureContent {...disclosure}>
         <h1 sx={style.genreTitle}>{genre.name}</h1>
+        {movies.map((item) => (
+          <MovieCard movie={item} />
+        ))}
       </DisclosureContent>
     </PageTemplate>
   );
