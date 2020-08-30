@@ -10,12 +10,10 @@ interface TemplatePageProps {
 }
 
 function TemplatePage(props: TemplatePageProps) {
-  const { children, title } = props;
-
   return (
     <Provider>
-      <Header title={title} />
-      {children}
+      <Header title={props.title} />
+      {props.children}
     </Provider>
   );
 }
