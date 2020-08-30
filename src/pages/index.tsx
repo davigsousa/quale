@@ -3,6 +3,7 @@ import { jsx } from 'theme-ui';
 import { useEffect, useState } from 'react';
 import { Box, Button } from 'reakit';
 import { useDisclosureState, DisclosureContent } from 'reakit/Disclosure';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 import PageTemplate from '../templates/Page';
 import style from '../styles';
@@ -49,22 +50,28 @@ export default function Home() {
 
       <Box sx={style.twoColumn}>
         <Box sx={style.genreBox}>
-          <Box sx={style.genreBoxTitle}>Selecione uma categoria</Box>
+          <Box sx={style.genreBoxTitle} id="menu">
+            Selecione uma categoria
+          </Box>
           {genres.map((item) => (
-            <Button
-              onClick={() => handleGenre(item)}
-              focusable
-              sx={style.genre}
-            >
-              {item.name}
-            </Button>
+            <AnchorLink to="/#categoria">
+              <Button
+                onClick={() => handleGenre(item)}
+                focusable
+                sx={style.genre}
+              >
+                {item.name}
+              </Button>
+            </AnchorLink>
           ))}
         </Box>
         <img sx={style.lupe} src={lupe} alt="Lupa" />
       </Box>
 
       <DisclosureContent {...disclosure}>
-        <h1 sx={style.genreTitle}>{genre.name}</h1>
+        <h1 id="categoria" sx={style.genreTitle}>
+          {genre.name}
+        </h1>
         {movies.map((item) => (
           <MovieCard key={item.id} movie={item} />
         ))}
