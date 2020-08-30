@@ -3,6 +3,7 @@ import { SxStyleProp } from 'theme-ui';
 interface IHeader {
   container: SxStyleProp;
   image: SxStyleProp;
+  button: SxStyleProp;
 }
 
 const header: IHeader = {
@@ -19,6 +20,9 @@ const header: IHeader = {
     borderBottomWidth: '2px',
   },
   image: {
+    height: '100%',
+  },
+  button: {
     height: '100%',
   },
 };
