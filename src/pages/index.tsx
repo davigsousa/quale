@@ -37,7 +37,6 @@ export default function Home() {
       `/discover/movie?page=1&with_genres=${newGenre.id}&${keyString}`
     );
 
-    console.log('res', response.data.results);
     setMovies(response.data.results);
   };
 
