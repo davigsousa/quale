@@ -5,7 +5,7 @@ import PageTemplate from '../templates/Page';
 export default function Home() {
   return (
     <PageTemplate>
-      <h1 sx={{ fontSize: 5, fontFamily: 'heading' }}>Qualé?</h1>
+      <h1 sx={{ fontSize: 5, fontFamily: 'heading' }}>Home</h1>
     </PageTemplate>
   );
 }

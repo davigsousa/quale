@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react';
 import { Provider } from 'reakit';
 
+import Header from '../components/Header';
+
 interface TemplatePageProps {
   children: ReactNode;
 }
@@ -8,7 +10,12 @@ interface TemplatePageProps {
 function TemplatePage(props: TemplatePageProps) {
   const { children } = props;
 
-  return <Provider>{children}</Provider>;
+  return (
+    <Provider>
+      <Header />
+      {children}
+    </Provider>
+  );
 }
 
 export default TemplatePage;
