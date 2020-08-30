@@ -1,14 +1,21 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { Box, Button } from 'reakit';
+import { Box } from 'reakit';
 
-import brand from '../../static/brand.png';
+const brand = require('../../static/brand.png');
 import header from '../styles/header';
 
-function Header() {
+interface HeaderProps {
+  title: string;
+}
+
+function Header(props: HeaderProps) {
+  const { title } = props;
+
   return (
     <Box sx={header.container}>
       <img src={brand} alt="Qualé?" sx={header.image} />
+      <h1 sx={header.title}>{title}</h1>
     </Box>
   );
 }
