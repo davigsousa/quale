@@ -9,12 +9,10 @@ import style from '../styles';
 import api, { keyString } from '../services/api';
 const lupe = require('../../static/lupe.png');
 
-interface Genre {
-  id: number;
-  name: string;
-}
+import { Genre, Movie } from '../interfaces';
 
 export default function Home() {
+  const [movies, setMovies] = useState<Movie[]>([]);
   const [genres, setGenres] = useState<Genre[]>([]);
   const [genre, setGenre] = useState<Genre>({ id: 0, name: '' });
   const disclosure = useDisclosureState({ visible: false });
@@ -27,11 +25,17 @@ export default function Home() {
     })();
   }, []);
 
-  const handleGenre = (newGenre: Genre) => {
+  const handleGenre = async (newGenre: Genre) => {
     disclosure.toggle();
 
     if (genre.name) disclosure.toggle();
     setGenre(newGenre);
+
+    const response = await api.get(
+      `/discover/movie?page=1&with_genres=${genre.id}&${keyString}`
+    );
+
+    console.log(response.data);
   };
 
   return (
