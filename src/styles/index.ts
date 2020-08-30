@@ -16,7 +16,7 @@ const styles: IStyles = {
     width: '100%',
     maxWidth: '900px',
     margin: 'auto',
-    padding: ['2% 5%', '3%', '0'],
+    padding: ['5%', '3%', '0'],
   },
   title: {
     fontSize: [4, 4, 5],
@@ -35,7 +35,7 @@ const styles: IStyles = {
     alignItems: 'center',
     justifyContent: 'center',
     padding: '40px 10px',
-    margin: '40px 0',
+    margin: ['0', '40px 0'],
     backgroundColor: 'primary',
     borderRadius: '40px',
     flexDirection: ['column-reverse', 'row', 'row'],
@@ -73,7 +73,8 @@ const styles: IStyles = {
     },
   },
   lupe: {
-    width: ['200px', '200px', '270px'],
+    width: ['150px', '240px'],
+    marginBottom: ['20px', '0'],
   },
 };
 
