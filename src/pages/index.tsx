@@ -4,7 +4,7 @@ import PageTemplate from '../templates/Page';
 export default function Home() {
   return (
     <PageTemplate>
-      <div>Hello world!</div>
+      <h1>Qualé?</h1>
     </PageTemplate>
   );
 }
