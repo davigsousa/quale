@@ -26,7 +26,10 @@ const styles: IStyles = {
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: '10px',
+    padding: '40px 10px',
+    margin: '40px 0',
+    backgroundColor: 'secondary',
+    borderRadius: '40px',
     flexDirection: ['column-reverse', 'column-reverse', 'row'],
   },
   genreBox: {
@@ -52,7 +55,7 @@ const styles: IStyles = {
     },
   },
   lupe: {
-    width: '300px',
+    width: ['200px', '270px'],
   },
 };
 
