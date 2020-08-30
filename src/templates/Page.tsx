@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Provider } from 'reakit';
+import 'typeface-raleway';
 
 import Header from '../components/Header';
 

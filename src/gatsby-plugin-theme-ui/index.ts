@@ -13,7 +13,7 @@ export default {
   },
   fonts: {
     body: 'Roboto, "Helvetica Neue", sans-serif',
-    heading: 'Roboto, "Helvetica Neue", sans-serif',
+    heading: 'Raleway, sans-serif',
     monospace: 'Menlo, monospace',
   },
 };
