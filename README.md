@@ -1,9 +1,4 @@
-<p align="center">
-  <a href="" rel="noopener">
-  <img width=300px height=200px src="./static/brand.png" alt="Qualé?"></a>
-</p>
-
-<h3 align="center">Qualé? (Em desenvolvimento)</h3>
+<h1 align="center">Qualé? (Em desenvolvimento)</h1>
 
 ---
 
